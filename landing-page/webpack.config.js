@@ -7,42 +7,40 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: modoDev ? 'development' : 'production',
-  entry: './src/principal.js',
-  output: {
-    filename: 'principal.js',
-    path: __dirname + '/public'
-  },
+  entry: './src/index.js',
   devServer: {
-    contentBase: './public',
-    port: 8080
+    contentBase: './build',
+    port: 8080,
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true
-      }),
-      new OptimizeCSSAssetsPlugin({})
+    new UglifyJsPlugin({
+      cache: true,
+      parallel: true,
+      sourceMap: true
+    }),
+    new OptimizeCSSAssetsPlugin({})
     ]
   },
+  output: {
+    filename: 'app.js',
+    path: __dirname + '/build'
+  },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "estilo.css"
-    }),
-    new CopyWebpackPlugin([
-      { context: 'src/', from: '**/*.html' },
-      { context: 'src/', from: 'imgs/**/*' }
+  new MiniCssExtractPlugin({ filename: 'estilo.css' }),
+  new CopyWebpackPlugin([
+    { context: 'src/', from: '**/*.html' },
+    { context: 'src/', from: 'imgs/**/*' }
     ])
   ],
   module: {
     rules: [{
       test: /\.s?[ac]ss$/,
       use: [
-        MiniCssExtractPlugin.loader,
-        //'style-loader', // Adiciona CSS a DOM na tag <style>
-        'css-loader', // interpleta @import, url() ...
-        'sass-loader'
+      MiniCssExtractPlugin.loader,
+      // 'style-loader', // Adiciona CSS a DOM injetando a tag <style>
+      'css-loader', // interpreta @import, url()...
+      'sass-loader',
       ]
     }, {
       test: /\.(png|svg|jpg|gif)$/,
