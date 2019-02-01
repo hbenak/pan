@@ -1,3 +1,54 @@
+$f_open: 'Open Sans', Arial, Helvetica, sans-serif;
+$f_lato: 'Lato', Arial, Helvetica, sans-serif;
+$f_ubuntu: 'Ubuntu', Arial, Helvetica, sans-serif;
+
+body {
+  font-family: $f_open;
+  background-color: #44a9df;
+}
+
+//HEADER
+.header {
+  .nav-item {
+    text-transform: uppercase;
+    list-style: none;
+
+    a {
+      font-size: 20px;
+    }
+  }
+}
+//HEADER
+
+//CONTENT
+.main {
+  padding-top: 174px;
+
+  .container-top {
+    padding-bottom: 180px;
+  }
+
+  .top-btn {
+    font-family: $f_lato;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .top-title {
+    font-family: $f_ubuntu;
+    font-size: 100px;
+    line-height: 104px;
+  }
+
+  .top-text {
+    font-family: $f_lato;
+    font-size: 26px;
+    line-height: 48px;
+    margin: 40px 0;
+  }
+}
+//CONTENT
+
 .jumbotron {
   background-color: #fff;
   margin: 0;
@@ -7,7 +58,33 @@
   font-weight: 300;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+//FOOTER
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .container {
+    border-color: #2faaf1 !important;
+  }
+
+  .footer-copyright {
+    padding-top: 2rem;
+  }
 }
+
+.item-social-link {
+  display: inline-block;
+  background: #2faaf1;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 7px;
+
+  i {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+}
+//FOOTER
