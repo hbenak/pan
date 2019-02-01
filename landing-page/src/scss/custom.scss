@@ -1,10 +1,20 @@
+//VARIABLES
 $f_open: 'Open Sans', Arial, Helvetica, sans-serif;
 $f_lato: 'Lato', Arial, Helvetica, sans-serif;
 $f_ubuntu: 'Ubuntu', Arial, Helvetica, sans-serif;
+//VARIABLES
+
+%bg-gradient-custom {
+  background: rgb(99,252,253); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(99,252,253,1) 0%, rgba(34,150,238,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(99,252,253,1) 0%,rgba(34,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(99,252,253,1) 0%,rgba(34,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63fcfd', endColorstr='#2296ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
 body {
   font-family: $f_open;
-  background-color: #44a9df;
+  background-color: #FFF;
 }
 
 //HEADER
@@ -22,10 +32,12 @@ body {
 
 //CONTENT
 .main {
-  padding-top: 174px;
+  //padding-top: 174px;
 
   .container-top {
+    padding-top: 174px;
     padding-bottom: 180px;
+    @extend %bg-gradient-custom
   }
 
   .top-btn {
@@ -45,6 +57,43 @@ body {
     font-size: 26px;
     line-height: 48px;
     margin: 40px 0;
+  }
+
+  .container-email {
+    background-color: #f9f9f9;
+  }
+
+  .container-solution {
+    color: #fff;
+    @extend %bg-gradient-custom
+  }
+
+  .box-video-player {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 95px;
+      height: 95px;
+      background: transparent url(/imgs/icon-play-video.png) center center no-repeat;
+      position: absolute;
+      left: calc(50% - 48px);
+      top: calc(50% - 48px);
+    }
+  }
+
+  .container-great-app {
+    background-color: #fafafa;
+  }
+
+  .container-counters {
+    color: #fff;
+    @extend %bg-gradient-custom
+  }
+
+  .container-blog {
+    background-color: #f9f9f9;
   }
 }
 //CONTENT
