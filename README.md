@@ -1,7 +1,7 @@
 # PAN
 Landing page e template de email responsivo
 
-##Dependências:
+## Dependências:
 -Node (10.15.0);
 -Bootstrap (4.1.1);
 -Font Awesome (4.7.0);
@@ -11,19 +11,19 @@ Landing page e template de email responsivo
 -Webpack CLI (2.1.3);
 -Webpack Dev Server (3.1.11).
 
-##Padronização de código:
+## Padronização de código:
 -Sublime Text;
 -VS Code;
 -Atom;
 -Outros.
 
-##Instalação:
+## Instalação:
 Na pasta /landing-page executar:
 $ npm install
 
-###Modo de desenvolvimento
+### Modo de desenvolvimento
 $ npm start
 Acessar em **localhost:8080**
 
-###Modo de produção
+### Modo de produção
 $ npm run build
