@@ -22,7 +22,7 @@ Na pasta /landing-page executar:
 $ npm install
 
 ### Modo de desenvolvimento
-$ npm start
+$ npm start  
 Acessar em **localhost:8080**
 
 ### Modo de produção
